@@ -1,0 +1,22 @@
+body{
+    font-family: 'Patua One', cursive;
+    color: #102C57;
+}
+
+.user-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2% 33%;
+  border:  1px solid #0d6efd;
+  box-shadow: 10px 10px  #0d6efd;
+
+}
+
+
+.input{
+    width: 70%;
+    margin: 2%;
+    padding: 10px;
+
+}
