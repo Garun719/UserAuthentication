@@ -1,72 +1,67 @@
-import React from 'react'
-import Header from '../Header'
-import Footer from '../Footer'
-
-import '../assets/css/about.css'
-function  About() {
+import React from "react";
+import Header from "../Header";
+import Footer from "../Footer";
+import photo from '../assets/Images/profile.jpg'
+import "../assets/css/about.css";
+function About() {
   return (
     <>
       <Header />
-      <section class="about-section mt-4">
+      <section class="about-section mt-5">
         <div class="container">
-            <div class="row">                
-                <div class="content-column col-lg-6 col-md-12 col-sm-12 order-2">
-                    <div class="inner-column">
-                        <div class="sec-title">
-                            <span class="title">About Css3transition</span>
-                            <h2>We are Creative Tech Enthusiast working since 2015</h2>
-                        </div>
-                        <div class="text">I am Garun Sahu works at Css3 Transition since last 3 years. We are here to provide touch notch solution for your website or web application that helps you to make your website look attractive & efficient in handling by creating usefull plugins thats you need.</div>
-                      <div class="text">
-                        We are here to serve you next level tutorial that currently in trend to match you with your expertise. Css3 transition is a learning website. where you can find many good quality content related to web development and tutorials about plugins. here we are using html, html5, css, css3, jquery & javascript along with inspirational UI design layout by professionals by using Photoshop and adobe allustrator.
-                      </div>
-                        <div class="btn-box">
-                            <a href="#" class="theme-btn btn-style-one">Contact Us</a>
-                        </div>
-                    </div>
+          <div class="row">
+            <div class="content-column col-lg-6 col-md-12 col-sm-12 order-2">
+              <div class="inner-column">
+                <div class="sec-title">
+                  <h2>GARUN SAHU</h2>
                 </div>
-
-                <div class="image-column col-lg-6 col-md-12 col-sm-12">
-                    <div class="inner-column wow fadeInLeft">
-                      <div class="author-desc">
-                        <h2>Garun Sahu</h2>
-                        <span>Web Developer</span>
-                      </div>
-                        <figure class="image-1"><a href="#" class="lightbox-image" data-fancybox="images"><img title="Rahul Kumar Yadav" src="https://i.ibb.co/QP6Nmpf/image-1-about.jpg" alt=""/></a></figure>
-                     
-                    </div>
+                <div class="text">
+                  Hello, I'm Garun Sahu, a passionate and skilled computer
+                  science graduate with a Bachelor's degree in Technology. My
+                  expertise encompasses a wide array of web development
+                  technologies, including HTML, CSS, Bootstrap, JavaScript, and
+                  ReactJS. With a strong foundation in coding and design
+                  principles, I possess the ability to seamlessly blend
+                  functionality and aesthetics in my projects. My journey has
+                  been enriched by active participation in numerous college
+                  events, where I've had the opportunity to showcase my
+                  technical prowess and innovative thinking. Beyond my technical
+                  skills, I have a keen interest in the realm of design,
+                  allowing me to create visually appealing and user-friendly
+                  digital experiences. With a solid educational background,
+                  practical experience, and a drive for continuous learning, I
+                  am dedicated to contributing to impactful projects and
+                  advancing the world of technology and design.
                 </div>
-              
+              </div>
             </div>
-           <div class="sec-title">
-                            <span class="title">Our Future Goal</span>
-                            <h2>We want to lead in innovation & Technology</h2>
-                        </div>
-          <div class="text">
-                We works on UI/UX and functionality as well so that a plugins comes with proper stucture & stunning looks which suits to your web app & website.
+
+            <div class="image-column col-lg-4 col-md-12 col-sm-12">
+              <div class="inner-column wow fadeInLeft"> 
+               
+                <figure class="image-1" style={{width:"500px"}}>
+                  <a href="#" class="lightbox-image" data-fancybox="images">
+                    <img
+                      height={'300px'}
+                      width={'300px'}
+                      style={{borderRadius:"100%"}}
+                      src={photo}
+                      alt=""
+                    />
+                  </a>
+                </figure>
               </div>
-               <div class="text">
-                We take a small toolkit here and ride it well so that it is fit for your use. One who performs well and looks even better.
-              </div>
-               <div class="text">                
-Here we are trying to give you all kinds of technical content, whether it is related to designing or functionality. We are creating content on a lot of languages and will continue to make it free of cost even if you use it without any problem. Which is a very important thing.
-              </div>
-               <div class="text">
-                Here you can also share the content you create, if our technical team likes it, then we will also share it on our blog.
-              </div>
-               <div class="text">
-                
-In the end, I would say keep visiting our website and enjoy the quality content.
-              </div>
+            </div>
+          </div>
+         
+         
         </div>
-    </section>
- 
-    <div class="footer-about">
-  <p>
-  ©2023 | All Rights Reserved
-</p>
-</div>
+      </section>
+
+      <div class="footer-about">
+        <p>©2023 | All Rights Reserved</p>
+      </div>
     </>
-  )
+  );
 }
-export default About
+export default About;

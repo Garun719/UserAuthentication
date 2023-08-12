@@ -14,17 +14,18 @@ function ContactUs() {
           <h1 class="section-title">Contact us</h1>
 
           <ul class="contact-ul">
-            <li><i class="fa fa-location-dot"></i> 91, Ram Nagar, Ram Mandir, Delhi</li>
+            <li><i class="fa fa-location-dot"></i> 
+            <a href="https://www.google.com/maps/place/Sector+58,+Noida,+Uttar+Pradesh+201301/@28.6059788,77.3528751,16z/data=!4m6!3m5!1s0x390ce56cf11a7011:0x49d7576acb82fa23!8m2!3d28.6067511!4d77.3597194!16s%2Fg%2F1w0j2k_v?entry=ttu">Bishunpura ,noida sector-58, Delhi</a> </li>
 
             <li>
               <i class="fa fa-phone"></i>
-              <a href="tel:08510004495"><b>0255000XXXX</b></a>,
-              <a href="tel:08510005495"><b>0251600XXXX</b></a>
+              <a href="tel:08510004495"><b>7651819061</b></a>,
+              <a href="tel:08510005495"><b>6367598978</b></a>
             </li>
 
             <li>
               <i class="fa-solid fa-envelope"></i>
-              <a href="mailto:pardeepkumar4bjp@gmail.com"><b> demounknown@gmail.com</b></a>
+              <a href="mailto:pardeepkumar4bjp@gmail.com"><b> garunsahu719@gmail.com</b></a>
             </li>
           </ul>
 

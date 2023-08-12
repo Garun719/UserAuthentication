@@ -1,20 +1,24 @@
-
+// App.js
 import './App.css';
 import ContactUs from './component/assets/ContactUs';
-
-import {  Routes,Route } from 'react-router-dom';
-import MainComponent from './component/MainComponent';
-import  About  from './component/assets/About';
+import { Routes, Route } from 'react-router-dom';
+import About from './component/assets/About';
+import Footer from './component/Footer';
+import Header from './component/Header';
+import Login from './component/Users/Login';
+import Signup from './component/Users/Signup';
 function App() {
   return (
     <>
-    <Routes>
-      <Route path="/" element={<MainComponent />}></Route>
-      <Route path='/contact' element={<ContactUs />}></Route>
-      <Route path='/About' element={<About/>}></Route>
-    </Routes>      
+      <Header />
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/contact" element={<ContactUs />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+      <Footer />
     </>
-
   );
 }
 
