@@ -5,7 +5,7 @@ import '../assets/css/contact.css';
 function ContactUs() {
   return (
     <>
-    <Header />
+
     <section class="contact-sec sec-pad">
   <div class="container">
     <div class="row">

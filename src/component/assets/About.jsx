@@ -6,7 +6,7 @@ import "../assets/css/about.css";
 function About() {
   return (
     <>
-      <Header />
+     
       <section class="about-section mt-5">
         <div class="container">
           <div class="row">

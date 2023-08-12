@@ -4,42 +4,41 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import swal from 'sweetalert';
 
-
 function UserForm() {
-  const [userData, setUserData] = useState({name: '', email: '', password: '' });
+  const [userData, setUserData] = useState({ name: '', email: '', password: '' });
 
   const handleInputChange = event => {
     const { name, value } = event.target;
-
-    // console.log(event.target.value)
-
     setUserData(prevData => ({
       ...prevData,
       [name]: value
     }));
   };
 
-  const handleSubmit = event => {
+  const handleSubmit = async event => {
     event.preventDefault();
-    // Now userData object contains the user's data
-    console.log("userData", userData);
 
-    const response = async()=>{
-      await axios.post("http://localhost:5000/signup", userData).then((res)=>{
-        console.log(res.data)
+    try {
+      const response = await axios.post("http://localhost:5000/signup", userData);
 
-      }).catch((err)=>{
-        console.log(err)
-      })
+      if (response.status === 200) {
+        // Show success alert
+        swal("Success", "User signed up successfully!", "success");
+      } else {
+        // Show error alert
+        swal("Error", "An error occurred during signup", "error");
+      }
+    } catch (error) {
+      console.log(error);
+      // Show error alert
+      swal("Error", "An error occurred during signup", "error");
     }
-
-    response()
-
   };
 
   return (
     <div className='user-form-container'>
       <form className='user-form' onSubmit={handleSubmit}>
+        
         <h1 className='form-title'>Signup</h1>
         <input
           type="text"
@@ -68,6 +67,7 @@ function UserForm() {
         <button className="btn btn-primary w-50 py-2" type="submit">SignUp</button>
         <p className="mt-5 mb-3 text-body-secondary">© 2017–2023</p>
         <p><Link to={"/"}>Already have an account?</Link></p>
+      
       </form>
     </div>
   );

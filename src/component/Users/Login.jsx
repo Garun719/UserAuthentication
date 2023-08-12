@@ -1,7 +1,9 @@
+
 import React, { useState } from 'react';
 import '../assets/css/userform.css';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import swal from 'sweetalert';
 
 function UserForm() {
   const [email, setEmail] = useState('');
@@ -18,14 +20,16 @@ function UserForm() {
       });
 
       if (response.status === 200) {
-        setMessage(response.data.message);
-        alert("Login Succesfuly!")
+        // Show success alert
+        swal("Success", "User sign In successfully!", "success");
       } else {
-        setMessage(response.data.error);
+        // Show error alert
+        swal("Error", "An error occurred during sign In", "error");
       }
     } catch (error) {
-      console.error('Error signing in:', error);
-      setMessage('An error occurred while signing in');
+      console.log(error);
+      // Show error alert
+      swal("Error", "An error occurred during sig In", "error");
     }
   };
 
@@ -61,3 +65,4 @@ function UserForm() {
 }
 
 export default UserForm;
+
