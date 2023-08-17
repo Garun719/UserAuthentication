@@ -4,11 +4,13 @@ import '../assets/css/userform.css';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import swal from 'sweetalert';
+import { useNavigate } from "react-router-dom";
 
 function UserForm() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
+const navigate  = useNavigate();
 
   const handleSignIn = async (e) => {
     e.preventDefault();
@@ -22,6 +24,7 @@ function UserForm() {
       if (response.status === 200) {
         // Show success alert
         swal("Success", "User sign In successfully!", "success");
+        navigate("/home")
       } else {
         // Show error alert
         swal("Error", "An error occurred during sign In", "error");

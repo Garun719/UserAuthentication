@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import '../assets/css/userform.css';
-import { Link } from 'react-router-dom';
+import { Link , Navigate, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import swal from 'sweetalert';
 
+
+
 function UserForm() {
   const [userData, setUserData] = useState({ name: '', email: '', password: '' });
+  const navigate = useNavigate();
 
   const handleInputChange = event => {
     const { name, value } = event.target;
@@ -24,6 +27,9 @@ function UserForm() {
       if (response.status === 200) {
         // Show success alert
         swal("Success", "User signed up successfully!", "success");
+        navigate("/home")
+        
+
       } else {
         // Show error alert
         swal("Error", "An error occurred during signup", "error");
